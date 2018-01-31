@@ -1,6 +1,7 @@
 # A jupyter notebook supporting Python 2 and Python 3 base on Debian
 
 ## Usage
+### Step 1
 docker run -d -p 8888:8888 --name jupyter dayelee/jupyter-notebook 
 
 Default Password: jupyter  
@@ -18,3 +19,6 @@ The Out[2] line's output is the yourpassword's hash value.
 
 Then you can use the following command to run your container.
 docker run -d -p 8888:8888 --name jupyter dayelee/jupyter-notebook --NotebookApp.password='sha1:90863f68f18e:b8ce839e0f5b3978ba093bd1b4763717b4388c11'
+
+### Step 2
+Then you can visit your jupyter notebook by http://yourdomain:8888 or http://yourip:8888

@@ -6,6 +6,7 @@ RUN ["apk", "add", "python3", "python2", "py2-pip"]
 RUN ["apk", "add", "gcc", "g++", "musl-dev", "python3-dev", "python2-dev"]
 RUN ["python3", "-m", "pip", "install", "jupyter"]
 RUN ["python", "-m", "pip", "install", "jupyter"]
+RUN ["ipython3", "kernel", "install"]
 LABEL version="0.0.1" maintainer="Daye Lee<tosony@163.com>"
 WORKDIR /root/
 ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
